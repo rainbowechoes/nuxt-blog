@@ -55,7 +55,7 @@
         </b-row>
         <el-divider></el-divider>
         <b-row style="height: 60px;margin-top: 35px;font-size: 12px">
-          <b-col sm="4" offset-sm="4">
+          <b-col sm="6" offset-sm="4">
             Copyright&nbsp;&copy;&nbsp;2018-2019&nbsp;Echo&nbsp;Blog.&nbsp;All&nbsp;rights&nbsp;reserved.&nbsp;蜀ICP备19007116号-1
           </b-col>
         </b-row>

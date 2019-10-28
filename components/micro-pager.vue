@@ -1,46 +1,48 @@
 <template>
   <div class="micro-article">
-    <el-row :gutter="24">
-      <el-col :sm="24">
-        <el-row :gutter="24" >
-          <el-col :sm="10">
-            <el-image
-              :src="imgUrl"
-              fit="fill">
-            </el-image>
-          </el-col>
-          <el-col :sm="14" >
-            <el-row :gutter="24">
-              <el-col :sm="24" style="font-size: 13px; font-weight: bold;">Article</el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="24" class="micro-title" v-text="title">
-              </el-col>
-            </el-row>
-            <el-row :gutter="24" style="margin-top: 5px">
-              <el-col :sm="8" style="font-size: 10px">
-                <nuxt-link :to="linkUrl">
-                  <el-link style="font-size: 10px" type="primary">More...</el-link>
-                </nuxt-link>
-              </el-col>
-              <el-col :sm="16" style="font-size: 10px">by
-                <span v-text="author"></span>.
-                <span v-text="postDate"></span>.
-                <i class="el-icon-chat-round" v-text="commentCount"></i></el-col>
-            </el-row>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
+    <b-row  >
+      <!-- micro article cover -->
+      <b-col sm="4">
+        <el-image
+          :src="imgUrl"
+          fit="fill">
+        </el-image>
+      </b-col>
+      <!-- micro article info -->
+      <b-col sm="8" >
+        <!-- title -->
+        <b-row >
+          <b-col sm="12" class="micro-title" v-text="title">
+          </b-col>
+        </b-row>
+        <!-- link -->
+        <b-row  style="margin-top: 5px">
+          <b-col sm="4" style="font-size: 10px">
+            <nuxt-link :to="linkUrl">
+              <el-link style="font-size: 10px" type="primary">More...</el-link>
+            </nuxt-link>
+          </b-col>
+          <b-col sm="8" style="font-size: 10px">by
+            <span v-text="author"></span>.
+            <span v-text="postDate"></span>.
+            <i class="el-icon-chat-round" v-text="commentCount"></i></b-col>
+        </b-row>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
+  import {BRow, BCol} from 'bootstrap-vue'
 export default {
   name: 'micro-pager',
   data () {
     return {
     }
+  },
+  components: {
+    BRow,
+    BCol
   },
   props: {
     imgUrl: {
@@ -76,7 +78,7 @@ export default {
     width: 200px;
     font-size: 13px;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;

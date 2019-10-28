@@ -99,6 +99,6 @@ export default {
   }
   /deep/.simple-content {
     font-size: 13px;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
   }
 </style>

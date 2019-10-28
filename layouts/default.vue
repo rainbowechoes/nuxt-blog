@@ -17,26 +17,21 @@
     </transition>
 
     <!--头部导航条-->
-    <header :style="headerStyle">
-      <navigation></navigation>
+    <header>
+      <navigation :style="headerStyle"></navigation>
     </header>
 
-    <div class="blog-container-fluid carousel-container">
+    <div class="blog-container-fluid carousel-container" style="margin-top: 80px">
       <!-- carousel -->
       <carousel></carousel>
     </div>
 
     <!-- content row -->
     <div class="blog-container">
-        <b-row>
-          <!-- 桌面设备显示 -->
-          <b-col lg="8">
-            <nuxt />
-          </b-col>
-          <b-col lg="4" class="d-none d-lg-block d-md-none ">
-            <right></right>
-          </b-col>
-        </b-row>
+      <div v-if="invalidRoute">
+        <page404></page404>
+      </div>
+      <nuxt />
     </div>
     <!-- footer -->
     <footer style="margin-top: 30px">
@@ -48,9 +43,9 @@
   import Navigation from '~/components/Navigation'
   import Carousel from '~/components/Carousel'
   import {BContainer, BRow, BCol} from 'bootstrap-vue'
-  import Right from '~/components/right-bar'
   import Tail from '~/components/tail'
   import throttle from 'throttle-debounce/throttle';
+  import Page404 from '~/components/404'
 
   export default {
     props: {
@@ -76,19 +71,10 @@
         input: '',
         fixStyle: {
           boxShadow: '0 10px 60px -5px #c1c1c5',
-          position: 'sticky',
-          top: '0',
-          zIndex: '999'
         },
         normalStyle: {
-          position: 'sticky',
-          top: '0',
-          zIndex: '999'
         },
         headerStyle: {
-          position: 'sticky',
-          top: '0',
-          zIndex: '999'
         },
         el: null,
         container: null,
@@ -107,9 +93,9 @@
       BContainer,
       BRow,
       BCol,
-      Right,
       Tail,
-      throttle
+      throttle,
+      Page404
     },
     methods: {
       init() {
@@ -182,7 +168,7 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-#app {
+body,html, #app {
   background-color: #f5f8f9;
 }
 
