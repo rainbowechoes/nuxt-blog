@@ -1,15 +1,20 @@
 <template>
-  <div>
-    test
-  </div>
+  <left></left>
 </template>
 
 <script>
 
-export default {
-  components: {
+  import Left from '~/components/left-bar'
+  export default {
+    components: {
+      Left
+    },
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      }
+    }
   }
-}
 </script>
 
 <style>

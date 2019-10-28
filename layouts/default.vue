@@ -5,23 +5,22 @@
       <navigation></navigation>
     </header>
 
-    <div class="blog-container">
+    <div class="blog-container-fluid">
       <!-- carousel -->
       <carousel></carousel>
     </div>
 
     <!-- content row -->
-    <div>
-      <b-container>
+    <div class="blog-container">
         <b-row>
-          <b-col md="8">
+          <!-- 桌面设备显示 -->
+          <b-col lg="8">
             <nuxt />
           </b-col>
-          <b-col md="4">
-            right
+          <b-col lg="4" class="d-none d-lg-block d-md-none ">
+            <right></right>
           </b-col>
         </b-row>
-      </b-container>
     </div>
     <!-- footer -->
     <footer>
@@ -32,10 +31,17 @@
 <script>
   import Navigation from '~/components/Navigation'
   import Carousel from '~/components/Carousel'
+  import {BContainer, BRow, BCol} from 'bootstrap-vue'
+  import Right from '~/components/right-bar'
+
   export default {
     components: {
       Navigation,
-      Carousel
+      Carousel,
+      BContainer,
+      BRow,
+      BCol,
+      Right
     }
   }
 </script>
@@ -60,18 +66,18 @@ html {
   margin: 0;
 }
 @media (min-width: 1200px) {
-  .blog-container {
+  .blog-container-fluid, .blog-container {
     width: 1200px;
-    margin: 100px auto auto auto;
-  }
-  .blog-carousel {
-    height: 300px;
+    margin: 20px auto auto auto;
   }
 }
 
 @media (max-width: 768px) {
+  .blog-container-fluid {
+    margin: 20px auto auto auto;
+  }
   .blog-container {
-    margin: 100px auto auto auto;
+    margin: 20px 5px auto 5px;
   }
 }
 
