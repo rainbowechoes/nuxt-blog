@@ -19,9 +19,9 @@
             </el-row>
             <el-row :gutter="24" style="margin-top: 5px">
               <el-col :sm="8" style="font-size: 10px">
-                <router-link :to="linkUrl">
+                <nuxt-link :to="linkUrl">
                   <el-link style="font-size: 10px" type="primary">More...</el-link>
-                </router-link>
+                </nuxt-link>
               </el-col>
               <el-col :sm="16" style="font-size: 10px">by
                 <span v-text="author"></span>.

@@ -9,25 +9,29 @@
       background="#ababab"
       img-width="1024"
       img-height="300"
-      style="text-shadow: 1px 1px 2px #333;height: 300px;"
+      style="text-shadow: 1px 1px 2px #333;"
+      class="carousel-container"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide v-slot:img style="height: 300px">
+      <b-carousel-slide v-slot:img class="carousel-container" caption="caption">
         <el-image
-          style="width:100%;height: 300px"
+          style="width:100%;"
+          class="carousel-container"
           :src="url"
           :fit="fit"></el-image>
       </b-carousel-slide>
-      <b-carousel-slide v-slot:img style="height: 300px">
+      <b-carousel-slide v-slot:img class="carousel-container">
         <el-image
-          style="width:100%;height: 300px"
+          style="width:100%;"
+          class="carousel-container"
           :src="url"
           :fit="fit"></el-image>
       </b-carousel-slide>
-      <b-carousel-slide v-slot:img style="height: 300px">
+      <b-carousel-slide v-slot:img class="carousel-container">
         <el-image
-          style="width:100%;height: 300px"
+          style="width:100%;"
+          class="carousel-container"
           :src="url"
           :fit="fit"></el-image>
       </b-carousel-slide>

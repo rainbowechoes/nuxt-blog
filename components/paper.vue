@@ -1,51 +1,55 @@
 <template>
   <div class="article">
-    <el-row :gutter="24">
-      <el-col :sm="24">
-        <el-row :gutter="24" style="height: 200px">
-          <el-col :sm="10">
-            <el-image
-              :src="imgUrl"
-              fit="fill">
-            </el-image>
-          </el-col>
-          <el-col :sm="14" >
-            <el-row :gutter="24">
-              <el-col :sm="24" style="font-weight: bold">Article</el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="24"
-                      class="title-content"
-                      v-text="title">
-              </el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="24" v-text="simpleContent" class="simple-content">
-              </el-col>
-            </el-row>
-            <el-row :gutter="24" style="font-size: 10px; margin-top: 5px">
-              <el-col :sm="4">
-                <nuxt-link :to="linkUrl"><el-link style="font-size: 10px" type="primary">More...</el-link></nuxt-link>
-              </el-col>
-              <el-col :sm="9" :offset="11">
-                by <span v-text="author"></span>.
-                <span v-text="postDate"></span>.
-                <i class="el-icon-chat-round" v-text="commentCount"></i>
-              </el-col>
-            </el-row>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
+    <b-row>
+      <b-col cols="4">
+        <!-- article cover -->
+        <el-image
+          :src="imgUrl"
+          fit="fill">
+        </el-image>
+      </b-col>
+      <b-col cols="8" >
+        <!-- article title -->
+        <b-row >
+          <b-col cols="12"
+                 class="title-content"
+                 v-text="title">
+          </b-col>
+        </b-row>
+        <!-- article content-->
+        <b-row class="d-none d-md-block d-sm-none">
+          <b-col cols="12" v-text="simpleContent" class="simple-content">
+          </b-col>
+        </b-row>
+        <!-- article info -->
+        <b-row  style="font-size: 10px; margin-top: 5px">
+          <b-col md="2" cols="3">
+            <nuxt-link :to="linkUrl"><el-link style="font-size: 10px" type="primary">More...</el-link></nuxt-link>
+          </b-col>
+          <b-col md="4" cols="9"  offset-md="6">
+            by <span v-text="author"></span>.
+            <span v-text="postDate"></span>.
+            <i class="el-icon-chat-round" v-text="commentCount"></i>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+
   </div>
 </template>
 
 <script>
+import {BRow, BCol} from 'bootstrap-vue'
+
 export default {
   name: 'paper',
   data () {
     return {
     }
+  },
+  components: {
+    BRow,
+    BCol
   },
   props: {
     imgUrl: {
@@ -83,7 +87,6 @@ export default {
 
 <style lang="scss" scoped>
   /deep/.title-content, /deep/.simple-content {
-    width: 420px;
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -92,11 +95,10 @@ export default {
 
   /deep/.title-content {
     -webkit-line-clamp: 2;
-    font-size: 20px;
     font-weight: bold;
   }
   /deep/.simple-content {
-    font-size: 14px;
-    -webkit-line-clamp: 4;
+    font-size: 13px;
+    -webkit-line-clamp: 3;
   }
 </style>

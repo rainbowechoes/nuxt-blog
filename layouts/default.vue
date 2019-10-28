@@ -5,7 +5,7 @@
       <navigation></navigation>
     </header>
 
-    <div class="blog-container-fluid">
+    <div class="blog-container-fluid carousel-container">
       <!-- carousel -->
       <carousel></carousel>
     </div>
@@ -23,8 +23,8 @@
         </b-row>
     </div>
     <!-- footer -->
-    <footer>
-      footer
+    <footer style="margin-top: 30px">
+      <tail></tail>
     </footer>
   </div>
 </template>
@@ -33,6 +33,7 @@
   import Carousel from '~/components/Carousel'
   import {BContainer, BRow, BCol} from 'bootstrap-vue'
   import Right from '~/components/right-bar'
+  import Tail from '~/components/tail'
 
   export default {
     components: {
@@ -41,7 +42,8 @@
       BContainer,
       BRow,
       BCol,
-      Right
+      Right,
+      Tail
     }
   }
 </script>
@@ -65,21 +67,7 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-@media (min-width: 1200px) {
-  .blog-container-fluid, .blog-container {
-    width: 1200px;
-    margin: 20px auto auto auto;
-  }
-}
 
-@media (max-width: 768px) {
-  .blog-container-fluid {
-    margin: 20px auto auto auto;
-  }
-  .blog-container {
-    margin: 20px 5px auto 5px;
-  }
-}
 
 .button--green {
   display: inline-block;
