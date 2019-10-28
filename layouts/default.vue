@@ -1,7 +1,23 @@
 <template>
-  <div>
+  <div id="app">
+    <!-- 手动结合backTop源码与导航条fix功能 -->
+    <transition name="el-fade-in">
+      <div
+        v-if="visible"
+        @click.stop="handleClick"
+        :style="{
+        'right': styleRight,
+        'bottom': styleBottom
+      }"
+        class="el-backtop">
+        <slot>
+          <el-icon name="caret-top"></el-icon>
+        </slot>
+      </div>
+    </transition>
+
     <!--头部导航条-->
-    <header>
+    <header :style="headerStyle">
       <navigation></navigation>
     </header>
 
@@ -34,8 +50,57 @@
   import {BContainer, BRow, BCol} from 'bootstrap-vue'
   import Right from '~/components/right-bar'
   import Tail from '~/components/tail'
+  import throttle from 'throttle-debounce/throttle';
 
   export default {
+    props: {
+      visibilityHeight: {
+        type: Number,
+        default: 200
+      },
+      // 跳转的锚点dom对象
+      target: '#app',
+      right: {
+        type: Number,
+        default: 40
+      },
+      bottom: {
+        type: Number,
+        default: 40
+      }
+    },
+    data () {
+      return {
+        activeIndex: '1',
+        activeIndex2: '1',
+        input: '',
+        fixStyle: {
+          boxShadow: '0 10px 60px -5px #c1c1c5',
+          position: 'sticky',
+          top: '0',
+          zIndex: '999'
+        },
+        normalStyle: {
+          position: 'sticky',
+          top: '0',
+          zIndex: '999'
+        },
+        headerStyle: {
+          position: 'sticky',
+          top: '0',
+          zIndex: '999'
+        },
+        el: null,
+        container: null,
+        visible: false
+      }
+    },
+    mounted() {
+      // window.addEventListener('scroll', this.scrollHandler);
+      this.init();
+      this.throttledScrollHandler = throttle(300, this.onScroll);
+      this.container.addEventListener('scroll', this.throttledScrollHandler);
+    },
     components: {
       Navigation,
       Carousel,
@@ -43,7 +108,64 @@
       BRow,
       BCol,
       Right,
-      Tail
+      Tail,
+      throttle
+    },
+    methods: {
+      init() {
+        this.container = document;
+        this.el = document.documentElement;
+        if (this.target) {
+          this.el = document.querySelector(this.target);
+          if (!this.el) {
+            throw new Error(`target is not existed: ${this.target}`);
+          }
+          this.container = this.el;
+        }
+      },
+      onScroll() {
+        // 处理回到顶部按钮是否可见
+        const scrollTop = this.el.scrollTop;
+        this.visible = scrollTop >= this.visibilityHeight;
+
+        // 处理导航条fix定位并绑定样式
+        let scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollDistance >= 380) {
+          this.headerStyle = this.fixStyle;
+        } else {
+          this.headerStyle = this.normalStyle;
+        }
+      },
+      handleClick(e) {
+        this.scrollToTop();
+        this.$emit('click', e);
+      },
+      scrollToTop() {
+        let el = this.el;
+        let step = 0;
+        let interval = setInterval(() => {
+          if (el.scrollTop <= 0) {
+            clearInterval(interval);
+            return;
+          }
+          step += 10;
+          el.scrollTop -= step;
+        }, 20);
+      }
+    },
+    computed: {
+      invalidRoute () {
+        return !this.$route.matched || this.$route.matched.length === 0;
+      },
+      styleBottom() {
+        return `${this.bottom}px`;
+      },
+      styleRight() {
+        return `${this.right}px`;
+      }
+    },
+    beforeDestroy() {
+      this.container.removeEventListener('scroll', this.throttledScrollHandler);
     }
   }
 </script>
@@ -60,41 +182,14 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+#app {
+  background-color: #f5f8f9;
+}
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
 }
 </style>

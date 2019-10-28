@@ -15,16 +15,16 @@
 </template>
 
 <script>
-  import Paper from './paper'
-  import Micro from './micro-pager'
+import Paper from './paper'
+import Micro from './micro-pager'
 
-  export default {
-    name: 'left-bar',
-    components: {
-      Paper,
-      Micro
-    }
+export default {
+  name: 'left-bar',
+  components: {
+    Paper,
+    Micro
   }
+}
 </script>
 
 <style scoped>
