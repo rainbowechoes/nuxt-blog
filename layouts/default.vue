@@ -1,8 +1,44 @@
 <template>
   <div>
-    <nuxt />
+    <!--头部导航条-->
+    <header>
+      <navigation></navigation>
+    </header>
+
+    <div class="blog-container">
+      <!-- carousel -->
+      <carousel></carousel>
+    </div>
+
+    <!-- content row -->
+    <div>
+      <b-container>
+        <b-row>
+          <b-col md="8">
+            <nuxt />
+          </b-col>
+          <b-col md="4">
+            right
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
+    <!-- footer -->
+    <footer>
+      footer
+    </footer>
   </div>
 </template>
+<script>
+  import Navigation from '~/components/Navigation'
+  import Carousel from '~/components/Carousel'
+  export default {
+    components: {
+      Navigation,
+      Carousel
+    }
+  }
+</script>
 
 <style>
 html {
@@ -22,6 +58,21 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+@media (min-width: 1200px) {
+  .blog-container {
+    width: 1200px;
+    margin: 100px auto auto auto;
+  }
+  .blog-carousel {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    margin: 100px auto auto auto;
+  }
 }
 
 .button--green {
