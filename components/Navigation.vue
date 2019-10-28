@@ -5,8 +5,10 @@
         <b-col cols="2">
           <b-navbar-brand href="#">NavBar</b-navbar-brand>
         </b-col>
-        <b-col cols="10">
+        <b-col cols="2" offset="7" class="d-block d-sm-none">
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        </b-col>
+        <b-col cols="10">
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav>
               <b-nav-item href="#">Link</b-nav-item>
