@@ -11,18 +11,21 @@
         <paper></paper>
       </div>
     </el-card>
+    <pagination></pagination>
   </div>
 </template>
 
 <script>
 import Paper from './paper'
 import Micro from './micro-pager'
+import Pagination from './pagination'
 
 export default {
   name: 'left-bar',
   components: {
     Paper,
-    Micro
+    Micro,
+    Pagination
   }
 }
 </script>
