@@ -21,7 +21,7 @@
       <navigation :style="headerStyle"></navigation>
     </header>
 
-    <div class="blog-container-fluid carousel-container" style="margin-top: 80px">
+    <div class="blog-container-fluid carousel-container" style="margin-top: 100px">
       <!-- carousel -->
       <carousel></carousel>
     </div>

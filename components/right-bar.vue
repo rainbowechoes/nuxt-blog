@@ -33,12 +33,20 @@
       </el-tabs>
     </el-card>
     <el-card class="info-card" shadow="hover" header="标签">
-      <nuxt-link to="/post/dfsd">
-        <el-tag>java</el-tag>
-      </nuxt-link>
-      <nuxt-link to="/post/fsdf">
-        <el-tag type="success">python</el-tag>
-      </nuxt-link>
+      <tag url="/post/sdfsd" color="primary" text="demo"></tag>
+      <tag url="/post/sdfsd" color="secondary" text="demo"></tag>
+      <tag url="/post/sdfsd" color="success" text="demo"></tag>
+      <tag url="/post/sdfsd" color="danger" text="demo"></tag>
+      <tag url="/post/sdfsd" color="info" text="demo"></tag>
+      <tag url="/post/sdfsd" color="light" text="demo"></tag>
+      <tag url="/post/sdfsd" color="dark" text="demo"></tag>
+    </el-card>
+    <el-card class="info-card" shadow="hover" header="分类">
+      <category count="12" text="category" category-color="primary"  url="/post/?c=category"></category>
+      <category count="12" text="demo" category-color="primary"  url="/post/?c=category"></category>
+      <category count="12" text="category" category-color="primary" url="/post/?c=category"></category>
+      <category count="12" text="category" category-color="primary" url="/post/?c=category"></category>
+      <category count="12" text="category" category-color="primary" url="/post/?c=category"></category>
     </el-card>
     <el-card shadow="hover" header="网站概况">
       <statistic></statistic>
@@ -49,6 +57,9 @@
 <script>
   import Micro from './micro-pager'
   import Statistic from './statistic'
+  import {BButton} from 'bootstrap-vue'
+  import Tag from './tag'
+  import Category from './category'
 
   export default {
     name: 'right-bar',
@@ -61,7 +72,10 @@
     },
     components: {
       Micro,
-      Statistic
+      Statistic,
+      BButton,
+      Tag,
+      Category
     }
   }
 </script>
