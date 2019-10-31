@@ -1,7 +1,7 @@
 <template>
-  <el-col :span="15">
+  <div>
     <el-card class="box-card info-card" header="留言板" shadow="hover">
-      <div v-for="comment in comments" :key="comment" class="text item">
+      <div v-for="comment in comments" :key="comment.commentContent" class="text item">
         <el-row :gutter="24">
           <el-col :span="12" style="text-align: left;" v-text="comment.commentContent">
           </el-col>
@@ -12,7 +12,7 @@
       <pagination></pagination>
     </el-card>
     <reviewer></reviewer>
-  </el-col>
+  </div>
 </template>
 
 <script>

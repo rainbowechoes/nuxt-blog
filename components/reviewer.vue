@@ -4,7 +4,7 @@
     <div style="padding: 0">
       <b-row>
         <b-col cols="12">
-          <textarea style="width: 100%;height: 150px" placeholder="评论内容" id="comment-text" autocomplete="off"></textarea>
+          <textarea style="width: 100%;height: 150px" placeholder="快来发表你的想法吧" id="comment-text" autocomplete="off"></textarea>
         </b-col>
       </b-row>
       <b-row>
@@ -15,8 +15,7 @@
 </template>
 
 <script>
-  // import Tinymce from 'vue-tinymce-editor'
-  // import '../../static/tinymce/zh_CN'
+  import {BRow, BCol} from 'bootstrap-vue'
   export default {
     name: 'reviewer',
     data () {
@@ -25,7 +24,8 @@
       }
     },
     components: {
-      // Tinymce
+      BRow,
+      BCol
     }
   }
 </script>
