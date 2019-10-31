@@ -5,9 +5,10 @@
         <!-- 评论者的头像 -->
         <b-col cols="2" md="1">
           <!-- 图片大小为120x120 -->
-          <el-avatar size="small"
-                     src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png">
-          </el-avatar>
+          <!--<el-avatar size="small"-->
+                     <!--src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png">-->
+          <!--</el-avatar>-->
+          <dent-icon userId="rainbow" imgSize="28"></dent-icon>
         </b-col>
         <b-col cols="9" md="11">
 
@@ -53,9 +54,10 @@
           <div class="comment-content">
             <b-row>
               <b-col cols="2" md="1">
-                <el-avatar size="small"
-                           :src="child.imgUrl">
-                </el-avatar>
+                <!--<el-avatar size="small"-->
+                           <!--:src="child.imgUrl">-->
+                <!--</el-avatar>-->
+                <dent-icon userId="heqiao" imgSize="28"></dent-icon>
               </b-col>
               <b-col cols="9" md="11">
                 <b-row>
@@ -84,6 +86,7 @@
   import 'element-ui/lib/theme-chalk/base.css';
   import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
   import {BRow, BCol} from 'bootstrap-vue'
+  import DentIcon from '~/components/dent-icon'
   export default {
     // 评论的回复
     name: 'review',
@@ -96,7 +99,8 @@
     components: {
       CollapseTransition,
       BRow,
-      BCol
+      BCol,
+      DentIcon
     },
     props: {
       childrens: {
