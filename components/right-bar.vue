@@ -42,11 +42,11 @@
       <tag url="/post/sdfsd" color="dark" text="demo"></tag>
     </el-card>
     <el-card class="info-card" shadow="hover" header="分类">
-      <category v-bind:count="12" text="category" category-color="primary"  url="/post/?c=category"></category>
-      <category v-bind:count="12" text="demo" category-color="primary"  url="/post/?c=category"></category>
-      <category v-bind:count="12" text="category" category-color="primary" url="/post/?c=category"></category>
-      <category v-bind:count="12" text="category" category-color="primary" url="/post/?c=category"></category>
-      <category v-bind:count="12" text="category" category-color="primary" url="/post/?c=category"></category>
+      <category v-bind:count="12" text="category" category-color="primary"  url="/search/?c=category"></category>
+      <category v-bind:count="12" text="demo" category-color="primary"  url="/search/?c=category"></category>
+      <category v-bind:count="12" text="category" category-color="primary" url="/search/?c=category"></category>
+      <category v-bind:count="12" text="category" category-color="primary" url="/search/?c=category"></category>
+      <category v-bind:count="12" text="category" category-color="primary" url="/search/?c=category"></category>
     </el-card>
     <el-card shadow="hover" header="网站概况">
       <statistic></statistic>

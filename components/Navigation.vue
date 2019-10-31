@@ -39,7 +39,9 @@
               <b-nav-item href="/message">留言板</b-nav-item>
               <b-nav-form>
                 <b-form-input size="sm" class="mr-sm-2" placeholder="搜索"></b-form-input>
-                <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+                <nuxt-link to="/search?s=dfds">
+                  <b-button size="sm" class="my-2 my-sm-0">Search</b-button>
+                </nuxt-link>
               </b-nav-form>
             </b-navbar-nav>
           </b-collapse>

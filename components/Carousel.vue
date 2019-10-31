@@ -13,58 +13,61 @@
       class="carousel-container"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
+
     >
-      <b-carousel-slide v-slot:img class="carousel-container" caption="caption">
-        <el-image
-          style="width:100%;"
-          class="carousel-container"
-          :src="url"
-          :fit="fit"></el-image>
-      </b-carousel-slide>
-      <b-carousel-slide v-slot:img class="carousel-container">
-        <el-image
-          style="width:100%;"
-          class="carousel-container"
-          :src="url"
-          :fit="fit"></el-image>
-      </b-carousel-slide>
-      <b-carousel-slide v-slot:img class="carousel-container">
-        <el-image
-          style="width:100%;"
-          class="carousel-container"
-          :src="url"
-          :fit="fit"></el-image>
-      </b-carousel-slide>
+      <div v-for="carouselItem in carouselItems" :key="carouselItem.title">
+        <b-carousel-slide v-slot:img class="carousel-container" :caption="carouselItem.title">
+          <el-image
+            style="width:100%;"
+            class="carousel-container"
+            :src="carouselItem.imgUrl"
+            :fit="fit"></el-image>
+        </b-carousel-slide>
+      </div>
     </b-carousel>
   </div>
 </template>
 
 <script>
-import {BCarousel, BCarouselSlide, BImg} from 'bootstrap-vue'
-export default {
-name: "Carousel",
-components: {
-  BCarousel,
-  BCarouselSlide,
-  BImg
-},
-data() {
-  return {
-    slide: 0,
-    sliding: null,
-    fit: 'cover',
-    url: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
+  import {BCarousel, BCarouselSlide, BImg} from 'bootstrap-vue'
+  export default {
+    name: "Carousel",
+    components: {
+      BCarousel,
+      BCarouselSlide,
+      BImg
+    },
+    data() {
+      return {
+        slide: 0,
+        sliding: null,
+        fit: 'cover',
+        carouselItems: [
+          {
+            imgUrl: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg',
+            title: 'carousel item 1'
+          },
+          {
+            imgUrl: 'https://picsum.photos/1024/480/?image=54',
+            title: 'carousel item 2'
+          },
+          {
+            imgUrl: 'https://picsum.photos/1024/480/?image=58',
+            title: 'carousel item 3'
+          },
+        ]
+
+      }
+    },
+    methods: {
+      onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      }
+    }
   }
-},
-methods: {
-  onSlideStart(slide) {
-    this.sliding = true
-  },
-  onSlideEnd(slide) {
-    this.sliding = false
-  }
-}
-}
 </script>
 
 <style scoped>
