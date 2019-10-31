@@ -3,7 +3,9 @@
     <div class="nav-container">
       <b-row>
         <b-col cols="2">
-          <b-navbar-brand href="#">Echo Blog</b-navbar-brand>
+          <nuxt-link to="/">
+            <b-navbar-brand href="">Echo Blog</b-navbar-brand>
+          </nuxt-link>
         </b-col>
         <!-- 折叠栏，手机和平板可见 -->
         <b-col cols="2" offset="7" class="d-block d-sm-block d-md-block d-lg-none">
