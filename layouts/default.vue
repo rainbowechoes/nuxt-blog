@@ -8,7 +8,7 @@
         :style="{
         'right': styleRight,
         'bottom': styleBottom
-      }"
+        }"
         class="el-backtop">
         <slot>
           <el-icon name="caret-top"></el-icon>
