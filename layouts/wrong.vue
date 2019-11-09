@@ -39,7 +39,7 @@
   import Carousel from '~/components/Carousel'
   import {BContainer, BRow, BCol} from 'bootstrap-vue'
   import Tail from '~/components/tail'
-  import throttle from 'throttle-debounce/throttle';
+  import throttle from 'element-ui/node_modules/throttle-debounce/throttle';
   import Page404 from '~/components/404'
 
   export default {
