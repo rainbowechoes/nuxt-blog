@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # nuxt-blog
 
 > nuxt blog project
