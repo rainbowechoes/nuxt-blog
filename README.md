@@ -1,6 +1,10 @@
 # nuxt-blog
 
-nuxt blog project
+本项目是基于nuxt.js和vue.js开发的个人博客前台门户网站，使用了BootstrapVue和ElementUI框架进行样式的丰富，实现了响应式布局与SSR服务器端渲染的效果。非常适合用于nuxt.js入门以及想要创建SSR端网站的开发者。
+
+本项目本身也是对我自己另一个项目的增强，见：https://gitee.com/rainbowecho/vue-element-blog
+
+未来此项目将会添加Dockerfile使其镜像化，便于发布与部署。
 
 ## Build Setup
 
