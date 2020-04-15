@@ -24,7 +24,9 @@
         <!-- article info -->
         <b-row  style="font-size: 10px; margin-top: 5px">
           <b-col md="2" cols="3">
-            <nuxt-link :to="linkUrl"><el-link style="font-size: 10px" type="primary">More...</el-link></nuxt-link>
+            <nuxt-link :to="linkUrl">
+              <el-link style="font-size: 10px" type="primary">More...</el-link>
+            </nuxt-link>
           </b-col>
           <b-col md="4" cols="9"  offset-md="6">
             by <span v-text="author"></span>.

@@ -17,6 +17,9 @@
 </template>
 
 <script>
+  import '../assets/css/monokai-sublime.css'
+  import hljs from 'highlight.js'
+  // import '../assets/css/markdown.css'
   export default {
     name: 'show-more',
     props: {
@@ -39,6 +42,8 @@
     mounted () {
       // 当加载好的时候就计算一次，观察是否需要隐藏
       this._calculateHeight()
+      // 进行代码高亮渲染
+      hljs.initHighlightingOnLoad();
     },
     watch: {
       // 每当内容变化时都重新计算一次高度

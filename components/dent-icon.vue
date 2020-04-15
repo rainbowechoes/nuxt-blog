@@ -8,7 +8,10 @@
     name: "dent-icon",
     props: {
       userId: String,
-      imgSize: Number
+      imgSize: {
+        type: Number,
+        default: 28
+      }
     },
     computed: {
       icon: function () {

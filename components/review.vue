@@ -4,11 +4,7 @@
       <b-row>
         <!-- 评论者的头像 -->
         <b-col cols="2" md="1">
-          <!-- 图片大小为120x120 -->
-          <!--<el-avatar size="small"-->
-                     <!--src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png">-->
-          <!--</el-avatar>-->
-          <dent-icon userId="rainbow" imgSize="28"></dent-icon>
+          <dent-icon userId="rainbow"></dent-icon>
         </b-col>
         <b-col cols="9" md="11">
 
