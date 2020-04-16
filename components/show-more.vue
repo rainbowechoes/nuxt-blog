@@ -5,7 +5,7 @@
       <div ref="content">
         <slot>
           <!-- 当外界 <show-more> 标签中有元素时，使用 <show-more> 标签中的元素进行渲染，否则使用下面这个 div 进行渲染 -->
-          <div v-html="content"></div>
+          <div v-html="content" v-highlight></div>
         </slot>
       </div>
     </div>
@@ -18,7 +18,7 @@
 
 <script>
   import '../assets/css/monokai-sublime.css'
-  import hljs from 'highlight.js'
+  import marked from 'marked'
   // import '../assets/css/markdown.css'
   export default {
     name: 'show-more',
@@ -41,33 +41,30 @@
     },
     mounted () {
       // 当加载好的时候就计算一次，观察是否需要隐藏
-      this._calculateHeight()
+      this._calculateHeight();
       // 进行代码高亮渲染
-      hljs.initHighlightingOnLoad();
+      this.content = marked(this.content);
     },
     watch: {
       // 每当内容变化时都重新计算一次高度
       content () {
-        this._calculateHeight()
+        this._calculateHeight();
       }
     },
     methods: {
       refresh () {
-        this._calculateHeight()
+        this._calculateHeight();
+        console.log("refresh 方法执行");
       },
       _calculateHeight () {
         // $nextTick()，等待内容获取完毕再计算高度，异步处理
         this.$nextTick().then(() => {
           let contentHeight = this.$refs.content.clientHeight;
-          if (contentHeight > this.showHeight) {
-            this.isLongContent = true
-          } else {
-            this.isLongContent = false
-          }
+          this.isLongContent = contentHeight > this.showHeight;
         })
       },
       _toggleShowMore () {
-        this.showMore = !this.showMore
+        this.showMore = !this.showMore;
       }
     }
   }

@@ -7,9 +7,13 @@
   export default {
     name: "dent-icon",
     props: {
-      userId: String,
+      userId: {
+        type: String,
+        default: 'rainbow'
+      },
       imgSize: {
         type: Number,
+        required: false,
         default: 28
       }
     },
