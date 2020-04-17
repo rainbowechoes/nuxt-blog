@@ -4,7 +4,7 @@
       <div class="blog-container-fluid">
         <b-row style="padding-top: 20px">
           <b-col cols="2">
-            <nuxt-link to="/"><a href="" class="blog-brand">Echo</a></nuxt-link>
+            <nuxt-link to="/" class="blog-brand">Echo</nuxt-link>
           </b-col>
           <b-col cols="5" class="blog-info">
             在变幻的生命里，时间才是最大的小偷

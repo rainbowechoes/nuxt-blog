@@ -1,6 +1,10 @@
 .info-card {
   margin-bottom: 20px;
 }
+.link, .link:hover {
+  text-decoration: none;
+  color: #66b1ff;
+}
 @media (min-width: 1200px) {
   .blog-container-fluid, .blog-container, .nav-container {
     width: 1200px;

@@ -12,7 +12,9 @@
         <div class="bullshit__headline">{{ message }}</div>
         <div class="bullshit__info">请确保你输入了正确的地址，或者点击下面这个按钮回到主页</div>
         <!--<router-link to="/"><el-link class="bullshit__return-home"></el-link></router-link>-->
-        <nuxt-link to="/"><a href="" class="bullshit__return-home">点我回到主页</a></nuxt-link>
+        <el-button type="primary">
+          <nuxt-link to="/" style="text-decoration: none;color: white">点我回到主页</nuxt-link>
+        </el-button>
       </div>
     </div>
   </div>

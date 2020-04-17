@@ -18,8 +18,8 @@
         <!-- link -->
         <b-row  style="margin-top: 5px">
           <b-col sm="4" style="font-size: 10px">
-            <nuxt-link :to="linkUrl">
-              <el-link style="font-size: 10px" type="primary">More...</el-link>
+            <nuxt-link :to="linkUrl" class="link">
+              More..
             </nuxt-link>
           </b-col>
           <b-col sm="8" style="font-size: 10px">by

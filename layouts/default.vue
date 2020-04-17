@@ -28,9 +28,6 @@
 
     <!-- content row -->
     <div class="blog-container">
-      <div v-if="invalidRoute">
-        <page404></page404>
-      </div>
       <nuxt />
     </div>
     <!-- footer -->
@@ -140,9 +137,6 @@
       }
     },
     computed: {
-      invalidRoute () {
-        return !this.$route.matched || this.$route.matched.length === 0;
-      },
       styleBottom() {
         return `${this.bottom}px`;
       },
