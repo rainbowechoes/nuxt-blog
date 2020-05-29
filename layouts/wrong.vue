@@ -23,9 +23,6 @@
 
     <!-- content row -->
     <div class="blog-container" style="margin-top: 120px">
-      <div v-if="invalidRoute">
-        <page404></page404>
-      </div>
       <nuxt />
     </div>
     <!-- footer -->

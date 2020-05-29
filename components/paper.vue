@@ -9,7 +9,6 @@
         </el-image>
       </b-col>
       <b-col cols="8" >
-        <!-- article title -->
         <b-row >
           <b-col cols="12"
                  class="title-content"

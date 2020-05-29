@@ -53,7 +53,7 @@
                 <!--<el-avatar size="small"-->
                            <!--:src="child.imgUrl">-->
                 <!--</el-avatar>-->
-                <dent-icon userId="heqiao" imgSize="28"></dent-icon>
+                <dent-icon userId="heqiao"></dent-icon>
               </b-col>
               <b-col cols="9" md="11">
                 <b-row>
