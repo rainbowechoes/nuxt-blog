@@ -1,13 +1,5 @@
 <template>
-  <b-row>
-    <!-- 桌面设备显示 -->
-    <b-col lg="8">
-      <left></left>
-    </b-col>
-    <b-col lg="4" class="d-none d-lg-block d-md-none ">
-      <right></right>
-    </b-col>
-  </b-row>
+  <left></left>
 </template>
 
 <script>

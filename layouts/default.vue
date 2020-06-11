@@ -28,7 +28,15 @@
 
     <!-- content row -->
     <div class="blog-container">
-      <nuxt />
+      <b-row>
+        <!-- 桌面设备显示 -->
+        <b-col lg="8">
+          <nuxt />
+        </b-col>
+        <b-col lg="4" class="d-none d-lg-block d-md-none ">
+          <right></right>
+        </b-col>
+      </b-row>
     </div>
     <!-- footer -->
     <footer style="margin-top: 30px">
@@ -43,6 +51,7 @@
   import Tail from '~/components/tail'
   import throttle from 'element-ui/node_modules/throttle-debounce/throttle';
   import Page404 from '~/components/404'
+  import Right from '~/components/right-bar'
 
   export default {
     props: {
@@ -92,7 +101,8 @@
       BCol,
       Tail,
       throttle,
-      Page404
+      Page404,
+      Right
     },
     methods: {
       init() {
