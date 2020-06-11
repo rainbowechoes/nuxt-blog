@@ -3,7 +3,7 @@
     <article-detail></article-detail>
     <copy-right></copy-right>
     <related></related>
-    <comment></comment>
+    <comment :article="articleId"></comment>
     <reviewer></reviewer>
   </div>
 </template>
@@ -24,8 +24,23 @@ export default {
     Comment,
     Reviewer
   },
+  data() {
+    return {
+      articleId: ''
+    }
+  },
+  /**
+   * 对路由参数进行校验
+   *
+   * @param params
+   * @returns {boolean}
+   */
   validate({params}) {
-    return !(typeof (params.id) == "undefined");
+    let valid = !(typeof (params.id) == "undefined");
+    if (valid) {
+      this.articleId = params.id;
+    }
+    return valid;
   }
 }
 </script>

@@ -46,13 +46,11 @@
 
     <collapse-transition>
       <ul v-show="!isPackUp">
-        <li class="sub-comment" v-for="child in childrens">
+        <!-- 显示某条评论的回复 -->
+        <li class="sub-comment" v-for="child in children">
           <div class="comment-content">
             <b-row>
               <b-col cols="2" md="1">
-                <!--<el-avatar size="small"-->
-                           <!--:src="child.imgUrl">-->
-                <!--</el-avatar>-->
                 <dent-icon userId="heqiao"></dent-icon>
               </b-col>
               <b-col cols="9" md="11">
@@ -83,6 +81,10 @@
   import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
   import {BRow, BCol} from 'bootstrap-vue'
   import DentIcon from '~/components/dent-icon'
+
+  /**
+   * 用户的回复组件
+   */
   export default {
     // 评论的回复
     name: 'review',
@@ -99,7 +101,7 @@
       DentIcon
     },
     props: {
-      childrens: {
+      children: {
         type: Array,
         default: () => [
           {
@@ -123,7 +125,7 @@
       },
       // 评论是否有回复
       hasChild () {
-        return this.childrens.length !== 0;
+        return this.children.length !== 0;
       }
     },
     methods: {
@@ -131,6 +133,7 @@
       handleToggle: function () {
         this.isPackUp = !this.isPackUp;
       },
+      // 跳转到回复框
       toPostReview: function () {
         const postReview = document.querySelector('#postReview');
         if (!!postReview) {

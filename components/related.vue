@@ -39,6 +39,7 @@
     'Man charged over missing wedding girl.',
     'Los Angeles battles huge wildfires.',
   ];
+
   export default {
     name: 'related',
     data() {

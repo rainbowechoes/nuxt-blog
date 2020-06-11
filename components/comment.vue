@@ -7,7 +7,6 @@
           <review></review>
         </li>
 
-
         <li>
           <review></review>
         </li>
@@ -31,6 +30,15 @@
     components: {
       Pagination,
       Review
+    },
+    props: {
+      /**
+       * 文章id，用于查找文章的评论数据
+       */
+      article: {
+        type: String,
+        required: true
+      }
     }
   }
 </script>
