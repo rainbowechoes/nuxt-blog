@@ -1,25 +1,36 @@
 <template>
   <div>
-    <el-row :gutter="24">
-      <el-col :sm="10" class="info-col">
-        <i class="el-icon-document"><span class="statistic-title"> 文章数</span>：1543</i>
-      </el-col>
-    </el-row>
-    <el-row :gutter="24">
-      <el-col :sm="10" class="info-col">
-        <i class="el-icon-chat-line-round"> <span class="statistic-title"> 评论数：</span>1543</i>
-      </el-col>
-    </el-row>
-    <el-row :gutter="24">
-      <el-col :sm="10" class="info-col">
-        <i class="el-icon-view"> <span class="statistic-title"> 访问数：</span>1543</i>
-      </el-col>
-    </el-row>
-    <el-row :gutter="24">
-      <el-col :sm="10" class="info-col">
-        <i class="el-icon-price-tag"> <span class="statistic-title"> 标签数：</span>1543</i>
-      </el-col>
-    </el-row>
+    <a-row :gutter="24">
+      <a-col :span="12">
+        <a-statistic title="文章数" :value="3423">
+          <template #suffix>
+            <a-icon type="highlight"></a-icon>
+          </template>
+        </a-statistic>
+      </a-col>
+      <a-col :span="12">
+        <a-statistic title="评论数" :value="2342">
+          <template #suffix>
+            <a-icon type="message"></a-icon>
+          </template>
+        </a-statistic>
+      </a-col>
+      <a-col :span="12">
+        <a-statistic title="访问数" :value="32">
+          <template #suffix>
+            <a-icon type="team"></a-icon>
+          </template>
+        </a-statistic>
+      </a-col>
+      <a-col :span="12">
+        <a-statistic title="标签数" :value="23">
+          <template #prefix>
+            <a-icon type="tags"></a-icon>
+          </template>
+        </a-statistic>
+      </a-col>
+    </a-row>
+
   </div>
 </template>
 
