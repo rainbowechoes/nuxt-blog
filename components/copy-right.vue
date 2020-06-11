@@ -15,7 +15,8 @@
         <div class="instruction">
           <span class="instruction-title">所属分类：</span>
           <nuxt-link to="/">
-            <a href="" class="btn btn-primary active btn-sm" role="button">Spring</a>
+            <!--<a href="" class="btn btn-primary active btn-sm" role="button">Spring</a>-->
+            Spring
           </nuxt-link>
         </div>
       </b-col>

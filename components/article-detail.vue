@@ -21,7 +21,7 @@
               <span>&nbsp;<i class="el-icon-star-on">{{like}}赞</i></span>
             </b-col>
             <b-col sm="2">
-              <el-link icon="el-icon-star-off"></el-link>
+              <a-rate :count="1" @change="fnLikeArticle"></a-rate>
             </b-col>
           </b-row>
         </div>
@@ -131,6 +131,9 @@
     methods: {
       loadIdentityAvatar(userId) {
 
+      },
+      fnLikeArticle(val) {
+        console.log(val);
       }
     }
   }
