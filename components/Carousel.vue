@@ -16,7 +16,7 @@
 
     >
       <div v-for="carouselItem in carouselItems" :key="carouselItem.title">
-        <b-carousel-slide v-slot:img class="carousel-container" :caption="carouselItem.title">
+        <b-carousel-slide v-slot:img class="carousel-container">
           <el-image
             style="width:100%;"
             class="carousel-container"

@@ -31,7 +31,8 @@ module.exports = {
   */
   plugins: [
     '~/plugins/element-ui',
-    '~/plugins/highlight'
+    '~/plugins/highlight',
+    '~/plugins/ant-design-vue'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -52,6 +53,14 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    // 服务端访问前缀
+    baseURL: 'http://localhost:8081',
+    // 客户端访问前缀
+    browserBaseURL: 'http://localhost:8081',
+    proxy: true
+  },
+  proxy: {
+    changeOrigin: true
   },
   /*
   ** Build configuration
