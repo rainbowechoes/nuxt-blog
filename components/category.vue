@@ -1,11 +1,7 @@
 <template>
-<!--    <el-badge :value="count" class="item" :type="badgeColor">-->
     <nuxt-link :to="url">
-      <!--<el-button size="small" v-text="text" :variant="categoryColor">-->
-      <!--</el-button>-->
       {{text}}
     </nuxt-link>
-<!--    </el-badge>-->
 </template>
 
 <script>
