@@ -79,10 +79,8 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-  }
-
-  /deep/.simple-content {
     font-size: 13px;
     -webkit-line-clamp: 4;
   }
+
 </style>

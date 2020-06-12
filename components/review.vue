@@ -4,7 +4,7 @@
       <b-row>
         <!-- 评论者的头像 -->
         <b-col cols="2" md="1">
-          <dent-icon userId="rainbow"></dent-icon>
+          <dent-icon :userId="comment.userId"></dent-icon>
         </b-col>
         <b-col cols="9" md="11">
 
@@ -12,13 +12,17 @@
           <b-row>
             <!-- 评论者昵称 -->
             <b-col cols="3">
-              <span>
-                Lorem ipsum.
+              <span v-text="comment.username">
               </span>
             </b-col>
             <!-- 评论时间 -->
             <b-col cols="3">
-              16 hours ago
+              <a-tooltip placement="top">
+                <template slot="title">
+                  发表时间：{{comment.formatDate}} <br>
+                </template>
+                {{comment.date}}
+              </a-tooltip>
             </b-col>
             <!-- 回复按钮 -->
             <b-col cols="1" offset="1">
@@ -36,27 +40,34 @@
             </b-col>
           </b-row>
           <!-- 评论内容 -->
-          <b-row>
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+          <b-row v-text="comment.content">
           </b-row>
         </b-col>
       </b-row>
 
     </div>
 
+    <!-- 回复内容 -->
     <collapse-transition>
       <ul v-show="!isPackUp">
         <!-- 显示某条评论的回复 -->
-        <li class="sub-comment" v-for="child in children">
+        <li class="sub-comment" v-for="review in comment.reviews">
           <div class="comment-content">
             <b-row>
               <b-col cols="2" md="1">
-                <dent-icon userId="heqiao"></dent-icon>
+                <dent-icon :userId="review.userId"></dent-icon>
               </b-col>
               <b-col cols="9" md="11">
                 <b-row>
-                  <b-col cols="4" md="2" v-text="child.author"></b-col>
-                  <b-col md="2" cols="4" v-text="child.post"></b-col>
+                  <b-col cols="4" md="2" v-text="review.username"></b-col>
+                  <b-col md="2" cols="4">
+                    <a-tooltip placement="top">
+                      <template slot="title">
+                        发表时间：{{review.formatDate}} <br>
+                      </template>
+                      {{review.date}}
+                    </a-tooltip>
+                  </b-col>
                   <!-- 回复按钮 -->
                   <b-col md="1" offset-md="1" cols="4">
                     <el-button type="text" size="small" style="padding-top: 0" @click="toPostReview">
@@ -65,7 +76,7 @@
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col v-text="child.content"></b-col>
+                  <b-col v-text="review.content"></b-col>
                 </b-row>
               </b-col>
             </b-row>
@@ -112,6 +123,10 @@
           }
         ],
         required: false
+      },
+      comment: {
+        type: Object,
+        required: true
       }
     },
     computed: {

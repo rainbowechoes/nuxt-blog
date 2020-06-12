@@ -4,7 +4,7 @@
     <div style="padding: 0">
       <b-row>
         <b-col cols="12">
-          <a-textarea placeholder="快来发表你的想法吧" :rows="4" allowClear/>
+          <a-textarea placeholder="快来发表你的想法吧" :maxLength="240" :rows="4" allowClear/>
         </b-col>
       </b-row>
       <b-row>
