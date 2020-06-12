@@ -3,7 +3,7 @@
     <el-card class="box-card" shadow="hover" header="最新文章">
       <div class="articles">
         <a-list item-layout="vertical" size="large" :pagination="pagination" :data-source="listData">
-          <a-list-item slot="renderItem" key="item.title" slot-scope="item, index">
+          <a-list-item slot="renderItem" key="item.title" slot-scope="item">
             <template v-for="{ type, text } in item.actions" slot="actions">
               <span :key="type">
                 <a-icon :type="type" style="margin-right: 8px" />
@@ -16,7 +16,7 @@
               alt="logo"
               src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
             />
-            <a-list-item-meta :description="item.description">
+            <a-list-item-meta>
               <a slot="title" :href="item.href">{{ item.title }}</a>
               <dent-icon slot="avatar"></dent-icon>
             </a-list-item-meta>
@@ -46,8 +46,6 @@ for (let i = 0; i < 23; i++) {
       { type: 'eye', text: '16' },
       { type: 'message', text: '2' }
     ],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium atque, debitis distinctio est excepturi id illo libero molestiae nobis.\n',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis deserunt eos hic in iste iure modi obcaecati, possimus quod recusandae sit sunt ut? Amet commodi, nobis! Adipisci assumenda, distinctio esse incidunt laboriosam maxime quas quasi ratione recusandae tenetur voluptates.',
   });

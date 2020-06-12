@@ -37,6 +37,10 @@
       BCol
     },
     props: {
+      copyright: {
+        type: String,
+        required: true
+      },
       category: {
         type: String,
         required: true

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <article-detail></article-detail>
-    <copy-right category="Spring"></copy-right>
-    <related></related>
+    <article-detail :post="article"></article-detail>
+    <copy-right :category="article.category" :copyright="article.copyright"></copy-right>
+    <related :relate="relate" :latest="latest"></related>
     <comment :article="article.id"></comment>
     <reviewer></reviewer>
   </div>
@@ -26,11 +26,60 @@
   },
   data() {
     return {
+      relate: [
+        {
+          title: 'lfishdfnsfsdf',
+          id: 'fsdfsdf'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'gfddhkjgndf'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'ghfdkjhd'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: '3ehjwjkm'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'fgjlijild'
+        }
+      ],
+      latest: [
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'gjlwkemlq'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'qwertewds'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'wqererjw'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'geghofkll'
+        },
+        {
+          title: 'fshdfkjdslfsdf',
+          id: 'rhidfgjlkgm'
+        }
+      ],
       article: {
         id: '',
         title: '文章标题测试',
-        author: 'rainbow',
+        // 作者的用户id
+        userId: 'rainbow',
+        // 作者的用户名
+        author: '东流长江水',
         date: '1小时前',
+        createDate: '2019年5月6日 14:12',
+        updateDate: '2019年5月6日 14:34',
         content: '# SpringBoot中使用Webflux实现SSE\n' +
           '\n' +
           '## 1. 概述\n' +
@@ -96,15 +145,13 @@
           '```',
         comment: 0,
         view: 0,
-        like: 0,
-        // 该用户是否点赞过
-        likeVal: 1,
         category: 'Spring',
         copyright: '个人原创文章，转载请联系作者，注明出处'
       }
     }
   },
   mounted() {
+    // 根据路由参数获取文章id
     this.article.id = this.$route.params.id;
   },
   /**

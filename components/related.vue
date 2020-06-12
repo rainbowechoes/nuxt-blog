@@ -3,18 +3,18 @@
   <el-row :gutter="24">
     <el-col :span="12">
       <el-card shadow="hover" class="info-card article-link-card" header="相关文章">
-        <a-list :data-source="urlData">
+        <a-list :data-source="relate">
           <a-list-item slot="renderItem" slot-scope="item, index">
-            <nuxt-link to="/" v-html="item"></nuxt-link>
+            <nuxt-link :to="'/post/' + item.id" v-html="item.title"></nuxt-link>
           </a-list-item>
         </a-list>
       </el-card>
     </el-col>
     <el-col :span="12">
       <el-card shadow="hover" class="info-card article-link-card" header="最新文章">
-        <a-list :data-source="urlData">
+        <a-list :data-source="latest">
           <a-list-item slot="renderItem" slot-scope="item, index">
-            <nuxt-link to="/" v-html="item"></nuxt-link>
+            <nuxt-link :to="'/post/' + item.id" v-html="item.title"></nuxt-link>
           </a-list-item>
         </a-list>
       </el-card>
@@ -40,18 +40,21 @@
       return {
         urlData
       }
+    },
+    props: {
+      relate: {
+        type: Array,
+        required: true
+      },
+      latest: {
+        type: Array,
+        required: true
+      }
     }
   }
 </script>
 
 <style scoped>
-  .article-route {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-  }
 
   .article-link-card {
     padding-bottom: 20px;
