@@ -21,11 +21,11 @@
               <span>&nbsp;<i class="el-icon-star-on">{{like}}赞</i></span>
             </b-col>
             <b-col sm="2">
-              <a-rate :count="1" @change="fnLikeArticle"></a-rate>
+              <!-- 点赞按钮，用户如果对该文章点过赞，则值为1，反之则为0 -->
+              <a-rate :count="1" @change="fnToggleLikeArticle"></a-rate>
             </b-col>
           </b-row>
         </div>
-
       </div>
 
       <div >
@@ -132,7 +132,7 @@
       loadIdentityAvatar(userId) {
 
       },
-      fnLikeArticle(val) {
+      fnToggleLikeArticle(val) {
         console.log(val);
       }
     }

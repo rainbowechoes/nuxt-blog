@@ -33,15 +33,15 @@
         default: () => [
           {
             commentContent: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt esse iure molestias quasi recusandae tempora velit, voluptate?',
-            postDate: '2018年5月3日 10:26分'
+            postDate: '2018年5月3日 10:26'
           },
           {
             commentContent: 'sdfgdsjhkfsdfsdf',
-            postDate: '2018年5月3日 10:26分'
+            postDate: '2018年5月3日 10:26'
           },
           {
             commentContent: 'sdfgdsjhkfsdfsdf',
-            postDate: '2018年5月3日 10:26分'
+            postDate: '2018年5月3日 10:26'
           }
         ]
       }

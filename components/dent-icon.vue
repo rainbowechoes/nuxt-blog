@@ -1,5 +1,8 @@
 <template>
-    <div v-html="icon"></div>
+  <div>
+    <el-avatar :src="url" :size="imgSize" v-if="userId === ''"></el-avatar>
+    <div v-html="icon" v-if="userId !== ''"></div>
+  </div>
 </template>
 
 <script>
@@ -15,7 +18,8 @@
         type: Number,
         required: false,
         default: 28
-      }
+      },
+      url: String
     },
     computed: {
       icon: function () {

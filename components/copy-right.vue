@@ -3,7 +3,7 @@
   <el-card shadow="hover" class="info-card">
     <b-row>
       <b-col cols="1">
-        <el-avatar :src="src" :size="50"></el-avatar>
+        <el-avatar :src="url" :size="50"></el-avatar>
       </b-col>
       <b-col cols="11">
         <div class="instruction" style="margin-bottom: 8px">
@@ -14,8 +14,7 @@
         </div>
         <div class="instruction">
           <span class="instruction-title">所属分类：</span>
-          <nuxt-link to="/">
-            Spring
+          <nuxt-link to="/" v-text="category">
           </nuxt-link>
         </div>
       </b-col>
@@ -31,9 +30,15 @@
       BRow,
       BCol
     },
+    props: {
+      category: {
+        type: String,
+        required: true
+      }
+    },
     data () {
       return {
-        src: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
+        url: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
       }
     }
   }

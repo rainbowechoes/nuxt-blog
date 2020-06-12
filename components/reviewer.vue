@@ -4,7 +4,7 @@
     <div style="padding: 0">
       <b-row>
         <b-col cols="12">
-          <textarea style="width: 100%;height: 150px" placeholder="快来发表你的想法吧" id="comment-text" autocomplete="off"></textarea>
+          <a-textarea placeholder="快来发表你的想法吧" :rows="4" allowClear/>
         </b-col>
       </b-row>
       <b-row>
