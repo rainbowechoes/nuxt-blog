@@ -5,7 +5,7 @@
       <b-col cols="1">
         <el-avatar :src="url" :size="50"></el-avatar>
       </b-col>
-      <b-col cols="11">
+      <b-col cols="6">
         <div class="instruction" style="margin-bottom: 8px">
           <span class="instruction-title">版权说明：</span>
           <span>
@@ -18,12 +18,18 @@
           </nuxt-link>
         </div>
       </b-col>
+      <b-col cols="5">
+        <div class="instruction">
+
+        </div>
+      </b-col>
     </b-row>
   </el-card>
 </template>
 
 <script>
   import {BRow, BCol} from 'bootstrap-vue'
+
   export default {
     name: 'copy-right',
     components: {

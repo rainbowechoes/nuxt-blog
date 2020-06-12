@@ -13,16 +13,17 @@
               </span>
             </b-col>
             <b-col sm="4">
-              by&nbsp;<span>{{author}}</span>.<span class="date" >{{date}}</span>
+              <a-tooltip placement="bottom">
+                <template slot="title">
+                  最后更新：2019年5月5日 14:32 <br>
+                  首发：2019年5月5日 14:32
+                </template>
+                by&nbsp;<span>{{author}}</span>.<span class="date" >{{date}}</span>
+              </a-tooltip>
             </b-col>
-            <b-col sm="5">
+            <b-col sm="7">
               <span class="comment" ><i class="el-icon-chat-round"></i> {{comment}}评论</span>
               <span class="views">&nbsp;<i class="el-icon-view"></i> {{view}}阅读</span>
-              <span>&nbsp;<i class="el-icon-star-on">{{like}}赞</i></span>
-            </b-col>
-            <b-col sm="2">
-              <!-- 点赞按钮，用户如果对该文章点过赞，则值为1，反之则为0 -->
-              <a-rate :count="1" @change="fnToggleLikeArticle"></a-rate>
             </b-col>
           </b-row>
         </div>
@@ -38,7 +39,7 @@
 
 <script>
   import ShowMore from './show-more'
-  import {BCol, BRow, BIconHammer} from 'bootstrap-vue'
+  import {BCol, BRow, BIconHammer, BIcon} from 'bootstrap-vue'
   import DentIcon from '~/components/dent-icon'
 
   export default {
@@ -126,7 +127,8 @@
       BRow,
       BCol,
       DentIcon,
-      BIconHammer
+      BIconHammer,
+      BIcon
     },
     methods: {
       loadIdentityAvatar(userId) {

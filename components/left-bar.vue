@@ -20,7 +20,8 @@
               <a slot="title" :href="item.href">{{ item.title }}</a>
               <dent-icon slot="avatar"></dent-icon>
             </a-list-item-meta>
-            {{ item.content }}
+            <div class="simple-content" v-text="item.content">
+            </div>
           </a-list-item>
         </a-list>
 
@@ -42,14 +43,13 @@ for (let i = 0; i < 23; i++) {
     title: `ant design vue part ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     actions: [
-      { type: 'star-o', text: '16' },
-      { type: 'like-o', text: '56' },
-      { type: 'message', text: '2' },
+      { type: 'eye', text: '16' },
+      { type: 'message', text: '2' }
     ],
     description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium atque, debitis distinctio est excepturi id illo libero molestiae nobis.\n',
     content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur debitis deserunt eos hic in iste iure modi obcaecati, possimus quod recusandae sit sunt ut? Amet commodi, nobis! Adipisci assumenda, distinctio esse incidunt laboriosam maxime quas quasi ratione recusandae tenetur voluptates.',
   });
 }
 
@@ -76,5 +76,15 @@ export default {
 </script>
 
 <style scoped>
+  /deep/.simple-content {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+  }
 
+  /deep/.simple-content {
+    font-size: 13px;
+    -webkit-line-clamp: 4;
+  }
 </style>
