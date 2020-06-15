@@ -95,7 +95,7 @@
       <!-- 邮箱登录表单 -->
       <div class="mailLoginForm" v-show="showA === false & showB === true">
         <a-form
-          id="components-form-demo-normal-login"
+          id="normal-login"
           :form="mailLoginForm"
           class="login-form"
           @submit="handleMailLoginSubmit"
@@ -103,9 +103,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'mail',
-          { rules: [{ required: true, message: '请输入你的邮箱' }] },
-        ]"
+                'mail',
+                { rules: [{ required: true, message: '请输入你的邮箱' }] },
+              ]"
               placeholder="账号绑定的邮箱地址"
             >
               <a-icon slot="prefix" type="mail" style="color: rgba(0,0,0,.25)" />
@@ -114,9 +114,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'code',
-          { rules: [{ required: true, message: '请输入验证码' }] },
-        ]"
+                'code',
+                { rules: [{ required: true, message: '请输入验证码' }] },
+              ]"
               placeholder="邮箱验证码"
             >
               <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
@@ -125,12 +125,12 @@
           <a-form-item>
             <a-checkbox
               v-decorator="[
-          'remember',
-          {
-            valuePropName: 'checked',
-            initialValue: true,
-          },
-        ]"
+                'remember',
+                {
+                  valuePropName: 'checked',
+                  initialValue: true,
+                },
+              ]"
             >
               记住我
             </a-checkbox>
@@ -151,7 +151,7 @@
       <!-- 用户名密码登录表单 -->
       <div class="userLoginForm" v-show="showA === true & showB === false">
         <a-form
-          id="components-form-demo-normal-login"
+          id="normal-login"
           :form="userLoginForm"
           class="login-form"
           @submit="handleUserLoginSubmit"
@@ -159,9 +159,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'username',
-          { rules: [{ required: true, message: '请输入用户名' }] },
-        ]"
+                'username',
+                { rules: [{ required: true, message: '请输入用户名' }] },
+              ]"
               placeholder="用户名"
             >
               <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
@@ -170,9 +170,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'password',
-          { rules: [{ required: true, message: '请输入登录密码' }] },
-        ]"
+                'password',
+                { rules: [{ required: true, message: '请输入登录密码' }] },
+              ]"
               type="password"
               placeholder="密码"
             >
@@ -182,12 +182,12 @@
           <a-form-item>
             <a-checkbox
               v-decorator="[
-          'remember',
-          {
-            valuePropName: 'checked',
-            initialValue: true,
-          },
-        ]"
+                'remember',
+                {
+                  valuePropName: 'checked',
+                  initialValue: true,
+                },
+              ]"
             >
               记住我
             </a-checkbox>
@@ -197,7 +197,7 @@
             <a-button type="primary" html-type="submit" class="login-form-button">
               登录
             </a-button>
-              或
+            或
             <a-button type="link" @click="fnChangeToRegister">
               注册
             </a-button>
@@ -208,7 +208,7 @@
       <!-- 手机号登录表单 -->
       <div class="phoneLoginForm" v-show="showA === true & showB === true">
         <a-form
-          id="components-form-demo-normal-login"
+          id="normal-login"
           :form="phoneLoginForm"
           class="login-form"
           @submit="handlePhoneLoginSubmit"
@@ -216,9 +216,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'phone',
-          { rules: [{ required: true, message: '请输入绑定的电话号码' }] },
-        ]"
+                'phone',
+                { rules: [{ required: true, message: '请输入绑定的电话号码' }] },
+              ]"
               placeholder="电话号码"
             >
               <a-icon slot="prefix" type="phone" style="color: rgba(0,0,0,.25)" />
@@ -227,9 +227,9 @@
           <a-form-item>
             <a-input
               v-decorator="[
-          'code',
-          { rules: [{ required: true, message: '请输入收到的手机登录验证码' }] },
-        ]"
+                'code',
+                { rules: [{ required: true, message: '请输入收到的手机登录验证码' }] },
+              ]"
               placeholder="验证码"
             >
               <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
@@ -238,12 +238,12 @@
           <a-form-item>
             <a-checkbox
               v-decorator="[
-          'remember',
-          {
-            valuePropName: 'checked',
-            initialValue: true,
-          },
-        ]"
+                'remember',
+                {
+                  valuePropName: 'checked',
+                  initialValue: true,
+                },
+              ]"
             >
               记住我
             </a-checkbox>
@@ -410,13 +410,13 @@
     background-clip: padding-box;
   }
 
-  #components-form-demo-normal-login .login-form {
+  #normal-login .login-form {
     max-width: 300px;
   }
-  #components-form-demo-normal-login .login-form-forgot {
+  #normal-login .login-form-forgot {
     float: right;
   }
-  #components-form-demo-normal-login .login-form-button {
+  #normal-login .login-form-button {
     width: 100%;
   }
 </style>
