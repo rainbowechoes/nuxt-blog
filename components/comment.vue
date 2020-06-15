@@ -34,22 +34,22 @@
             content: '评论内容',
             reviews: [
               {
-                userId: 'heqiaoying',
-                username: 'heqiao',
+                userId: 'zhanghaoman',
+                username: 'zhanghaoman',
                 date: '3分钟前',
                 formatDate: '2019年5月5日 14:25',
                 content: '回复内容1'
               },
               {
-                userId: 'heqiaoying',
-                username: 'heqiao',
+                userId: 'zhanghaoman',
+                username: 'zhanghaoman',
                 date: '2分钟前',
                 formatDate: '2019年5月5日 14:26',
                 content: '回复内容2'
               },
               {
-                userId: 'heqiaoying',
-                username: 'heqiao',
+                userId: 'zhanghaoman',
+                username: 'zhanghaoman',
                 date: '1分钟前',
                 formatDate: '2019年5月5日 14:26',
                 content: '回复内容3'
