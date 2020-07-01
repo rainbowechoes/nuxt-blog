@@ -77,7 +77,7 @@
     data() {
       return {
         input: '',
-        src: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg',
+        src: 'https://tva3.sinaimg.cn/large/0067iOPdgy1ggbjdvyztbj33402c0qvb.jpg',
         fit: 'cover'
       }
     }

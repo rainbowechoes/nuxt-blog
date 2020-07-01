@@ -18,6 +18,7 @@
                   最后更新：{{post.updateDate}} <br>
                   首发：{{post.createDate}}
                 </template>
+                <!-- TODO 使用moment来修改时间展示 -->
                 by&nbsp;<span>{{post.author}}</span>.&nbsp;<span class="date" >{{post.date}}</span>
               </a-tooltip>
             </b-col>

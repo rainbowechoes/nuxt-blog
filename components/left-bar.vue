@@ -17,7 +17,9 @@
               src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
             />
             <a-list-item-meta>
-              <a slot="title" :href="item.href">{{ item.title }}</a>
+              <nuxt-link :to="item.href" slot="title">
+                {{ item.title }}
+              </nuxt-link>
               <dent-icon slot="avatar"></dent-icon>
             </a-list-item-meta>
             <div class="simple-content" v-text="item.content">

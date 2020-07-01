@@ -3,7 +3,7 @@
   <el-card class="info-card" shadow="hover" header="热门评论">
     <div class="comments">
       <ul id="comments">
-        <li v-for="item in comments">
+        <li v-for="item in comments" :key="item.id">
           <review :comment="item"></review>
         </li>
       </ul>
@@ -27,6 +27,7 @@
       return {
         comments: [
           {
+            id: 'fsdfs',
             userId: 'rainbow',
             username: 'rainbow',
             date: '5分钟前',
@@ -34,6 +35,7 @@
             content: '评论内容',
             reviews: [
               {
+                id: '123',
                 userId: 'zhanghaoman',
                 username: 'zhanghaoman',
                 date: '3分钟前',
@@ -41,6 +43,7 @@
                 content: '回复内容1'
               },
               {
+                id: '13',
                 userId: 'zhanghaoman',
                 username: 'zhanghaoman',
                 date: '2分钟前',
@@ -48,6 +51,7 @@
                 content: '回复内容2'
               },
               {
+                id: '432',
                 userId: 'zhanghaoman',
                 username: 'zhanghaoman',
                 date: '1分钟前',
