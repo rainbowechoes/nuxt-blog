@@ -44,7 +44,7 @@
         fit: 'cover',
         carouselItems: [
           {
-            imgUrl: '',
+            imgUrl: 'https://tva3.sinaimg.cn/large/0067iOPdgy1ggbjdvyztbj33402c0qvb.jpg',
             title: 'carousel item 1'
           },
           {
