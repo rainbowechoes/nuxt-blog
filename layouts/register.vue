@@ -31,7 +31,7 @@
 
 <style scoped>
   .register-container {
-    background: url('https://tva3.sinaimg.cn/large/0067iOPdgy1ggbjdvyztbj33402c0qvb.jpg') bottom center no-repeat;
+    background: url('https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ak_uAaIx0AFGkw2YQlV8934.jpg') bottom center no-repeat;
     background-size: 100% 100%;
     height: 600px;
   }

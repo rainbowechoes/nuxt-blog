@@ -44,16 +44,19 @@
         fit: 'cover',
         carouselItems: [
           {
-            imgUrl: 'https://tva3.sinaimg.cn/large/0067iOPdgy1ggbjdvyztbj33402c0qvb.jpg',
-            title: 'carousel item 1'
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ak_uAaIx0AFGkw2YQlV8934.jpg',
+            title: 'carousel item 1',
+            postId: '',
           },
           {
-            imgUrl: 'https://picsum.photos/1024/480/?image=54',
-            title: 'carousel item 2'
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8alyuAZvu9AI-POk9sF_A315.jpg',
+            title: 'carousel item 2',
+            postId: '',
           },
           {
-            imgUrl: 'https://picsum.photos/1024/480/?image=58',
-            title: 'carousel item 3'
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ak_uAaIx0AFGkw2YQlV8934.jpg',
+            title: 'carousel item 3',
+            postId: '',
           },
         ]
 

@@ -3,23 +3,19 @@
 </template>
 
 <script>
-
-  import Left from '~/components/left-bar'
-  import Right from '~/components/right-bar'
-  import {BRow,BCol} from 'bootstrap-vue'
-  export default {
-    components: {
-      Left,
-      Right,
-      BRow,
-      BCol
-    },
-    methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      }
-    }
+import Left from "~/components/left-bar";
+import Right from "~/components/right-bar";
+import { BRow, BCol } from "bootstrap-vue";
+export default {
+  components: {
+    Left,
+    Right,
+    BRow,
+    BCol
+  },
+  methods: {
   }
+};
 </script>
 
 <style>
@@ -33,8 +29,8 @@
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

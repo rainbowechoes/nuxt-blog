@@ -47,7 +47,7 @@ export default {
   props: {
     imgUrl: {
       type: String,
-      default: 'https://tvax1.sinaimg.cn/large/0067iOPdgy1ggbjbyq48sj33402c04qu.jpg'
+      default: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8alCSAHaBSAABy3m9GPbE655.jpg'
     },
     title: {
       type: String,

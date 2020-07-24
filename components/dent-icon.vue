@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-avatar :src="url" :size="imgSize" v-if="userId === ''"></el-avatar>
-    <div v-html="icon" v-if="userId !== ''"></div>
+    <div v-html="icon" v-if="userId !== ''" v-style="{width: imgSize + 'px', height: imgSize + 'px'}"></div>
   </div>
 </template>
 
