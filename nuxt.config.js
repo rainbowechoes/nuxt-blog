@@ -1,52 +1,55 @@
-
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
   /*
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || "",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || "",
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    ],
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/css/common.css',
-    '~/assets/css/normailze.css'
+    "~/assets/css/common.css",
+    "~/assets/css/normailze.css",
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/element-ui',
-    '~/plugins/highlight',
-    '~/plugins/ant-design-vue'
+    "~/plugins/element-ui",
+    "~/plugins/highlight",
+    "~/plugins/ant-design-vue",
+    "~/plugins/api",
   ],
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
+  buildModules: [],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
+    "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    "@nuxtjs/axios",
   ],
   /*
   ** Axios module configuration
@@ -54,13 +57,13 @@ module.exports = {
   */
   axios: {
     // 服务端访问前缀
-    baseURL: 'http://localhost:8081',
+    baseURL: "http://localhost:8081",
     // 客户端访问前缀
-    browserBaseURL: 'http://localhost:8081',
-    proxy: true
+    browserBaseURL: "http://localhost:8081",
+    proxy: true,
   },
   proxy: {
-    changeOrigin: true
+    changeOrigin: true,
   },
   /*
   ** Build configuration
@@ -69,7 +72,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
-  }
-}
+    extend(config, ctx) {
+    },
+  },
+};

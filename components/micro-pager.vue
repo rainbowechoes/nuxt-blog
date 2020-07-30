@@ -5,7 +5,8 @@
       <b-col sm="4">
         <el-image
           :src="imgUrl"
-          fit="fill">
+          style="width: 58px; height: 58px"
+          fit="cover">
         </el-image>
       </b-col>
       <!-- micro article info -->
@@ -47,7 +48,7 @@ export default {
   props: {
     imgUrl: {
       type: String,
-      default: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8alCSAHaBSAABy3m9GPbE655.jpg'
+      default: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ievGASq-TAABpxWPTM_g401.jpg'
     },
     title: {
       type: String,

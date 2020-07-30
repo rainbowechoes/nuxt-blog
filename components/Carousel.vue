@@ -44,17 +44,17 @@
         fit: 'cover',
         carouselItems: [
           {
-            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ak_uAaIx0AFGkw2YQlV8934.jpg',
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ievCAfYPuAAKdRLqNfpk609.jpg',
             title: 'carousel item 1',
             postId: '',
           },
           {
-            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8alyuAZvu9AI-POk9sF_A315.jpg',
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ievCAMStUAAJoT1Tfd0w706.jpg',
             title: 'carousel item 2',
             postId: '',
           },
           {
-            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ak_uAaIx0AFGkw2YQlV8934.jpg',
+            imgUrl: 'https://blue.rainbowecho.top/group1/M00/00/02/rB-G2l8ievGAeVZXAATGyTLQOhU336.jpg',
             title: 'carousel item 3',
             postId: '',
           },

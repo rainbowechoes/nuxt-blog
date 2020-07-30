@@ -6,6 +6,8 @@
 import Left from "~/components/left-bar";
 import Right from "~/components/right-bar";
 import { BRow, BCol } from "bootstrap-vue";
+import * as Api from "../plugins/api";
+
 export default {
   components: {
     Left,
@@ -13,8 +15,7 @@ export default {
     BRow,
     BCol
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
