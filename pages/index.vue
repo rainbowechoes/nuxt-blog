@@ -15,7 +15,11 @@ export default {
     BRow,
     BCol
   },
-  methods: {}
+  methods: {},
+  async asyncData({$axios}) {
+    const result = await $axios.$get(Api.queryArticleByPage())
+    console.log('文章分页结果', result);
+  },
 };
 </script>
 

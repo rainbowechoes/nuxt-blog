@@ -1,11 +1,8 @@
-import Vue from "vue";
-const protocol = "http";
-const host = "localhost";
-const port = "8081";
+const host = "https://1b9b331a-d349-457e-a1c0-aed9a68951f2.mock.pstmn.io";
 const prefix = "v1";
 
 let articleServiceUri =
-  `${protocol}://${host}:${port}/${prefix}/article-service/article`;
+  `${host}/${prefix}/article-service/article`;
 
 let articleServiceApi = {
   queryArticleByPage: `${articleServiceUri}`,
